@@ -290,7 +290,10 @@ const Select: React.FC<SelectProps> = ({
                         <Options
                             list={list}
                             noOptionsMessage={noOptionsMessage}
-                            text={inputValue}
+                            text={(
+                                    onSearchInputChange &&
+                                    typeof onSearchInputChange === "function"
+                                  ) ? "" : inputValue}
                             isMultiple={isMultiple}
                             value={value}
                             primaryColor={primaryColor || DEFAULT_THEME}
