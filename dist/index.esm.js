@@ -452,7 +452,7 @@ const Select = ({ options = [], value = null, onChange, onSearchInputChange, pla
         }, value: value, handleValueChange: handleValueChange },
         React.createElement("div", { className: "relative w-full", ref: ref },
             React.createElement("div", { "aria-expanded": open, onKeyDown: onPressEnterOrSpace, onClick: toggle, className: getSelectClass() },
-                React.createElement("div", { className: "grow pl-2.5 py-2 pr-2 flex flex-wrap gap-1" }, !isMultiple ? (React.createElement("p", { className: "truncate cursor-default select-none" }, value && !Array.isArray(value) ? value.label : placeholder)) : (React.createElement(React.Fragment, null,
+                React.createElement("div", { className: "grow pl-2.5 py-2 pr-2 flex flex-wrap gap-1 overflow-hidden" }, !isMultiple ? (React.createElement("p", { className: "truncate cursor-default select-none" }, value && !Array.isArray(value) ? value.label : placeholder)) : (React.createElement(React.Fragment, null,
                     value === null && placeholder,
                     Array.isArray(value) &&
                         value.map((item, index) => (React.createElement("div", { className: getTagItemClass(item), key: index },
